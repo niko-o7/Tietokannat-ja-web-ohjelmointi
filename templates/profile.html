@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ username }}</title>
+
+    <h3> Reviews: </h3>
+    <p>Total amount of reviews: {{ reviewcount }} </p>
+
+    <h2>Your reviews</h2>
+    {% if reviews %}
+        {% for review in reviews %}
+        <h3>
+            <a href="/thread/{{ review.thread_id}}">
+                {{review.title}}
+            </a>
+        </h3>
+        <p>Rating: {{review.grade}}</p>
+        <p>Genres: {{review.genres}} </p>
+        <p> {{review.review}} </p>
+
+    {% endfor %}
+{% else %}
+    <p>No posts found</p>
+{% endif %}
+
+<a href="/reviewpage">Back to reviewpage</a>
+</head>
+
+
+
+</html>

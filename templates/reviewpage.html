@@ -78,14 +78,18 @@
 {% for result in results %}
     <li>
         <a href="/thread/{{ result.thread_id }}">
-            {{result.thread_title}}
+        {{result.thread_title}}
         </a>
         <br />
-        {{ result.username }}
+        Posted by: {{ result.username }}
     </li>
 {% endfor %}
 
 </ul>
-{% endif %}
+{% elif query %}
+<p>No results found for "{{ query }}"</p>
 
+
+{% endif %}
+{% endif %}
 </html>
