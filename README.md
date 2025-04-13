@@ -20,3 +20,5 @@ I have not tested how any of the functions work in action, but almost everything
 
 
 The code is in branches -> master, I dont know what i did for it to go there, but hopefully that's okay
+
+I wrote the updated README now in master -branch
